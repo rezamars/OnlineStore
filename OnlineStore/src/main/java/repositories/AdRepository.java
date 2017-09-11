@@ -13,7 +13,8 @@ import org.springframework.data.rest.core.annotation.RestResource;
 import entities.Ad;
 
 //@RepositoryRestResource(path = "ads")
-public interface AdRepository extends CrudRepository<Ad,Long>{
+@RepositoryRestResource
+public interface AdRepository extends CrudRepository<Ad,Integer>{
 	
 	//List<Ad> findByHeadLine(@Param("headline") String headline);
 
