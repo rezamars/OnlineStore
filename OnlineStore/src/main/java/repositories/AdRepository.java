@@ -14,7 +14,7 @@ import entities.Ad;
 
 //@RepositoryRestResource(path = "ads")
 @RepositoryRestResource
-public interface AdRepository extends CrudRepository<Ad,Integer>{
+public interface AdRepository extends CrudRepository<Ad,Long>{
 	
 	//List<Ad> findByHeadLine(@Param("headline") String headline);
 

@@ -15,7 +15,7 @@ public class Ad {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="ad_id")
-	private int id;
+	private long id;
 	
 	@Column(name="headline")
 	private String headline;
@@ -45,7 +45,15 @@ public class Ad {
 	@Column(name="publish_time")
 	private String pubTime;
 
-	public int getId() {
+	public Ad(){
+		
+	}
+	
+	public Ad(int id){
+		this.id = id;
+	}
+	
+	public long getId() {
 		return id;
 	}
 

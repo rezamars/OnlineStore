@@ -1,0 +1,26 @@
+/*
+.headline {
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+div {
+    
+    vertical-align: middle;
+    border: 1px solid red;
+    height: 100%;
+    display: table;
+    vertical-align: middle;
+    align-items: center;
+}
+*/
+.headline {
+    position: relative;
+    transform: translateY(-100%);
+    
+}
+
+body {
+    text-align: center
+}
