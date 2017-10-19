@@ -13,17 +13,6 @@ function getData(){
     });
 }
 
-/*
-function get_(url, func)
-{
- var http;
- try { http = new XMLHttpRequest(); } catch (e) { try { http = new ActiveXObject(\"Msxml2.XMLHTTP\"); } catch (e) { try { http = new ActiveXObject(\"Microsoft.XMLHTTP\"); } catch (e) { alert(\"Your browser broke!\"); return false; } } }
-
- http.open(\"GET\", url, true);
- http.onreadystatechange = function() { if(http.readyState == 4) { func(http); } }
- http.send(null);
-}
- */
 
 var headline1;
 var image1;
@@ -36,17 +25,10 @@ function getFetch(){
 	 .then(response => response.json())
 	 .then(data => {
 		 
-		console.log("length: " + data._embedded.ads.length);
 		for(var i = 0 ; i<data._embedded.ads.length ; i++){
 	    		adsArray.push(data._embedded.ads[i]);
 	    }
-		/*
-		headline1 = adsArray[1].headline;
-		document.getElementById("headline").value = headline1;
 		
-		image1 = adsArray[1].image;
-		document.getElementById("image1").src = "data:image/png;base64," + image1;
-		*/
 		createListOfAds();
 		
 	 })
@@ -61,11 +43,10 @@ var clickedAdIndex = -1;
 function createListOfAds(){
 	
 	var div = document.createElement("div");
+	div.setAttribute("id", "indexdiv");
 	var h2 = document.createElement("h2");
 	h2.innerHTML= "Current Ads:";
 	div.appendChild(h2);
-	
-	//var kashk = -1;
 	
 	for(var i = 0 ; i < adsArray.length ; i++){
 		
@@ -114,5 +95,36 @@ function saveIndex(link,index){
 		sessionStorage.setItem('adindex', JSON.stringify(indexOfAd));
 	}
 	
+}
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if(dd<10) {
+        dd = '0'+dd
+    } 
+
+    if(mm<10) {
+        mm = '0'+mm
+    } 
+
+    var date = dd + '/' + mm + '/' + yyyy;
+    var time = h + ":" + m + ":" + s;
+    document.getElementById('date_time').innerHTML = date + "\n" + time;
+    
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
 }
  

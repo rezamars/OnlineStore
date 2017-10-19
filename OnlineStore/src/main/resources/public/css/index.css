@@ -1,26 +1,70 @@
-/*
-.headline {
-	text-align: center;
-	vertical-align: middle;
-}
 
-
-div {
-    
-    vertical-align: middle;
-    border: 1px solid red;
-    height: 100%;
-    display: table;
-    vertical-align: middle;
-    align-items: center;
-}
-*/
 .headline {
     position: relative;
     transform: translateY(-100%);
-    
 }
 
-body {
+h1 {
     text-align: center
+}
+
+#buttondiv {
+	text-align: center;
+	transform: translateX(5%);
+}
+
+#indexdiv {
+	text-align: center;
+  	margin: 0 auto;
+}
+
+#outerdiv {
+	width: 75%;
+  	margin: 0 auto;
+}
+
+#innerdiv1 {
+	text-align: left;
+	border: 3px solid #73AD21;
+}
+
+#innerdiv2 {
+	text-align: center;
+	border: 3px solid #0000ff;
+}
+
+.div2content {
+	position: relative;
+    transform: translateY(500%);
+}
+
+.textarea {
+    transform: translateY(0%);
+}
+
+.tainput {
+    transform: translateY(-250%);
+}
+
+.span {
+	text-align: center;
+	float: right;
+}
+
+.buttons {
+	//float: right;
+	background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    text-decoration:underline;
 }

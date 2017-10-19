@@ -5,10 +5,14 @@
     <title>Adpage</title>
     <script type="text/javascript" src="js/ad.js"></script>
     <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" 
+    href="css/unsemantic-grid-responsive-tablet.css" />
 </head>
-<body>
+<body onLoad="getFetch();startTime()">
 	<h1>View Ad</h1>
-	<input type="button" value="Load DB" onClick="getFetch()" id="loadbutton">
+	<br>
+	<a href="index.html">Start</a>
+	<textarea id="date_time" class="span" rows="2" cols="15" readonly></textarea>
 	<br><br>
 	<!--  
 	<div>
