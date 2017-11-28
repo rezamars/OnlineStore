@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
     <meta charset="UTF-8">
     <title>Add ad page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-route.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
     <script type="text/javascript" src="js/addad.js"></script>
     <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" 
+    href="css/unsemantic-grid-responsive-tablet.css" />
 </head>
-<body onload="startTime()">
+<body onload="startTime();adjustdivheight()" ng-app="myApp">
 	<h1>Add Ad</h1>
 	<a href="index.html">Start</a>
 	<textarea id="date_time" class="span" rows="2" cols="15" readonly></textarea>
-	
 	<br><br>
-	
+	<div class="grid-75 mobile-grid-75 tablet-grid-75" id="innerdiv3"  >
+		<img src="imageMissing.png" id="adimage" alt="MISSING IMAGE" download/>
+		<br><br>
+		<div class="imagediv">
+			<input type="file" class="custom-file-input" name="myImage" accept="image/*" onchange="readURL(this)" />
+		</div>
+		<br><br>
+		<input type="text" value="Ad Headline:" readonly>
+		<input type="text" id="headline" size="31">
+		<br>
+		<input type="text" value="Price (SEK):" readonly>
+		<input type="text" id="price" size="31">
+		<br>
+		<input type="text" class="tainput" value="Description:" readonly>
+		<textarea id="description" class="textarea" rows="7" cols="30" ></textarea>
+		<br>
+		<input type="text" value="Seller Name:" readonly>
+		<input type="text" id="name" size="31">
+		<br>
+		<input type="text" value="Phone Number:" readonly>
+		<input type="text" id="number" size="31">
+		<br>
+		<input type="text" value="E-mail:" readonly>
+		<input type="text" id="email" size="31">
+		<br>
+	</div>
+	<div class="grid-25 mobile-grid-25 tablet-grid-25" id="innerdiv4" ng-controller="mainController">
+		<form name="myform"  >
+  			<input type="submit" id="savebutton" value="Save Ad" ng-click="createData()">
+		</form>
+	</div>
 </body>
 
 </html>

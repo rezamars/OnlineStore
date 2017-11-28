@@ -33,6 +33,19 @@ h1 {
 	border: 3px solid #0000ff;
 }
 
+#innerdiv3 {
+	text-align: center;
+	border: 3px solid #0000ff;
+}
+
+#innerdiv4 {
+	text-align: center;
+	border: 3px solid #0000ff;
+  	display: flex;
+  	align-items: flex-end;
+  	justify-content: center;
+}
+
 .div2content {
 	position: relative;
     transform: translateY(500%);
@@ -68,3 +81,27 @@ h1 {
 input[type=submit]:hover{
     text-decoration:underline;
 }
+
+#adimage {
+	width: 200px;
+	height: 200px;
+}
+
+.addad {
+	text-align: center;
+}
+
+#savebutton {
+	background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    display: table-cell;
+    font-size: 16px;
+    cursor: pointer;
+}
+
