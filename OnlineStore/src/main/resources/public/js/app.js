@@ -30,6 +30,8 @@ function getFetch(){
 	    }
 		
 		createListOfAds();
+		var loadbutton = document.getElementById("loadbutton");
+		loadbutton.disabled = true;
 		
 	 })
 	 .catch(err => {
@@ -44,6 +46,12 @@ function createListOfAds(){
 	
 	var div = document.createElement("div");
 	div.setAttribute("id", "indexdiv");
+	var br = document.createElement("br");
+	div.appendChild(br);
+	var br2 = document.createElement("br");
+	div.appendChild(br2);
+	var br3 = document.createElement("br");
+	div.appendChild(br3);
 	var h2 = document.createElement("h2");
 	h2.innerHTML= "Current Ads:";
 	div.appendChild(h2);
@@ -73,7 +81,7 @@ function createListOfAds(){
 		saveIndex(link,i);
 		
 		links.push(link);
-		console.log(imgUrl);
+		
 		div.appendChild(link);
 		
 		var input = document.createElement("input");
@@ -85,6 +93,10 @@ function createListOfAds(){
 	}
 	
 	document.body.appendChild(div);
+	
+	rightDivHeight = div.offsetHeight;
+	var leftDiv = document.getElementById('leftdiv');
+	leftDiv.style.height = rightDivHeight + 'px';
 	
 }
 

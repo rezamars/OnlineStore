@@ -9,14 +9,10 @@ h1 {
 }
 
 #buttondiv {
-	text-align: center;
+	//text-align: center;
 	transform: translateX(5%);
 }
 
-#indexdiv {
-	text-align: center;
-  	margin: 0 auto;
-}
 
 #outerdiv {
 	width: 75%;
@@ -46,6 +42,7 @@ h1 {
   	justify-content: center;
 }
 
+
 .div2content {
 	position: relative;
     transform: translateY(500%);
@@ -64,7 +61,21 @@ h1 {
 	float: right;
 }
 
-.buttons {
+#loadbutton {
+	//float: right;
+	background-color: #ffff00; /* Green */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.addbutton {
 	//float: right;
 	background-color: #4CAF50; /* Green */
     border: none;
@@ -77,6 +88,35 @@ h1 {
     font-size: 16px;
     cursor: pointer;
 }
+
+.editbutton {
+	//float: right;
+	background-color: #0080ff; /* Green */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.deletebutton {
+	//float: right;
+	background-color: #ff0000; /* Green */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 
 input[type=submit]:hover{
     text-decoration:underline;

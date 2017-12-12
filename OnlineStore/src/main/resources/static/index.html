@@ -5,19 +5,33 @@
     <title>Homepage</title>
     <script type="text/javascript" src="js/app.js"></script>
     <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" 
+    href="css/unsemantic-grid-responsive-tablet.css" />
 </head>
 <body onload="startTime()">
 	<h1>Welcome to OnlineStore</h1>
-	<textarea id="date_time" class="span" rows="2" cols="15" readonly></textarea>
 	
-	<form action="addad.html">
-		<input type="submit" class="buttons" value="Add ad">
-	</form>
-	<br>
-	<div id="buttondiv">
-	<input type="button" value="Load DB" onClick="getFetch()" id="loadbutton">
+	<div class="grid-40 mobile-grid-40 tablet-grid-40" id="leftdiv"  >
+		<form action="addad.html">
+			<input type="submit" class="addbutton" value="Add ad">
+		</form>
+		<br>
+		<form action="editad.html">
+			<input type="submit" class="editbutton" value="Edit ad">
+		</form>
+		<br>
+		<form action="deletead.html">
+			<input type="submit" class="deletebutton" value="Edit ad">
+		</form>
 	</div>
-	<br><br>
+	
+	<div class="grid-60 mobile-grid-60 tablet-grid-60" id="rightdiv" >
+		<textarea id="date_time" class="span" rows="2" cols="15" readonly></textarea>
+		
+		<input type="button" value="Load Ads from DB" onClick="getFetch()" id="loadbutton">
+		
+	</div>
+	
 	
 </body>
 
